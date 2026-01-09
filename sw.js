@@ -1,5 +1,5 @@
-/* GymScan Pro - simple offline cache */
-const CACHE_NAME = 'gym-guy-v1';
+/* Gym Guy - simple offline cache */
+const CACHE_NAME = 'gym-guy-v2';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -30,14 +30,12 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
 
   const url = new URL(req.url);
-  // Only handle same-origin
   if (url.origin !== self.location.origin) return;
 
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
       return fetch(req).then((res) => {
-        // Cache successful same-origin responses
         const copy = res.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(req, copy)).catch(()=>{});
         return res;
