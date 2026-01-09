@@ -1,8 +1,8 @@
 {
-  "name": "GymScan Pro",
-  "short_name": "GymScan",
-  "description": "健身器材识别与新手训练辅助",
-  "start_url": "./index.html",
+  "name": "Gym Guy",
+  "short_name": "GymGuy",
+  "description": "健身新手的随身健身说明书（可安装 PWA）",
+  "start_url": "./app.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0a0f1a",

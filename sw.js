@@ -1,8 +1,9 @@
 /* GymScan Pro - simple offline cache */
-const CACHE_NAME = 'gymscan-pro-v1';
+const CACHE_NAME = 'gym-guy-v1';
 const PRECACHE_URLS = [
   './',
   './index.html',
+  './app.html',
   './manifest.json',
   './icons/icon-32.png',
   './icons/icon-192.png',
